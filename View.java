@@ -25,7 +25,7 @@ class View extends JPanel
 		this.add(b1);
 
 		try {
-			this.bird_image = ImageIO.read(new File("REPLACEME"));
+			this.bird_image = ImageIO.read(new File("bird1.png"));
 		} catch(Exception e) {
 			e.printStackTrace(System.err);
 			System.exit(1);

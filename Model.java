@@ -1,9 +1,11 @@
+import java.util.Random;
+
 class Model {
-  int bird_x, bird_y;
-  int dest_x, dest_y;
+  int bird_x, bird_y; // May not need bird_x
   Bird bird;
 
   Model() {
+    bird_y = 250;
     bird = new Bird(bird_x, bird_y);
   }
 
@@ -20,7 +22,7 @@ class Model {
       this.bird_y -= Math.min(4, bird_y); //dest_y + bird_y);
     */
 
-    
+
   }
 
 /*

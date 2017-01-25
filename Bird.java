@@ -1,12 +1,15 @@
 class Bird {
   double yVel = 0;
+  double x_pos, y_pos;
 
   Bird() {
 
   }
 
   Bird(int x, int y) {
-
+    x_pos = x;
+    y_pos = y;
+    
   }
 
   public void flap() {
