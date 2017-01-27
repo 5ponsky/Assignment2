@@ -1,28 +1,21 @@
 import java.util.Random;
 
 class Model {
-  int bird_x, bird_y; // May not need bird_x
+  //int bird_x, bird_y; // May not need bird_x
   Bird bird;
+  Tube tube;
+  int tube_y;
+  Random tubeHeight;
 
   Model() {
-    bird_y = 250;
-    bird = new Bird(bird_x, bird_y);
+    bird = new Bird(); //bird_x, bird_y);
+    tube = new Tube();
+    tubeHeight = new Random();
   }
 
   public void update() {
-    /*
-    if(this.bird_x < this.dest_x)
-      this.bird_x += Math.min(4, dest_x - bird_x);
-    else if(this.bird_x > this.dest_x)
-      this.bird_x -= Math.min(4, dest_x + bird_x);
-
-    if(this.bird_y < this.dest_y)
-      this.bird_y += Math.min(4, bird_y); //dest_y - bird_y);
-    else if(this.bird_y > this.dest_y)
-      this.bird_y -= Math.min(4, bird_y); //dest_y + bird_y);
-    */
-
-
+    bird.update();
+    tube.update(tubeHeight);
   }
 
 /*

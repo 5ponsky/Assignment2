@@ -24,7 +24,7 @@ class Controller implements ActionListener, MouseListener
 	}
 
 	public void mousePressed(MouseEvent e) {
-		model.setDestination(e.getX(), e.getY());
+		model.onClick();
 	}
 
 	// Not used yet?
