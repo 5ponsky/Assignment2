@@ -34,18 +34,15 @@ class View extends JPanel
 	public void paintComponent(Graphics g) {
 		g.setColor(new Color(128, 255, 255));
 		g.fillRect(0, 0, this.getWidth(), this.getHeight());
-		if(model.bird.y_pos > 0)
+		if(model.bird.flapCounter <= 0)
 			g.drawImage(this.bird_image_up, model.bird.x_pos, model.bird.y_pos, null);
 		else
 			g.drawImage(this.bird_image_down, model.bird.x_pos, model.bird.y_pos, null);
 
-		g.drawImage(this.tube_up_image, model.tube.x_pos, model.tube.y_pos, null);
-		//g.drawImage(this.tube_down_image, model.bird_x, model.bird_y, null);
-	}
-
-	void removeButton() {
-		this.remove(b1);
-		this.repaint();
+		if(tube.tubeUpwards)
+			g.drawImage(this.tube_up_image, model.tube.x_pos, model.tube.y_pos, null);
+		else
+			g.drawImage(this.tube_down_image, model.bird_x, model.bird_y, null);
 	}
 
 }
