@@ -24,10 +24,9 @@ class Controller implements ActionListener, MouseListener
 	}
 
 	public void mousePressed(MouseEvent e) {
-		model.onClick();
+
 	}
 
-	// Not used yet?
 	public void mouseReleased(MouseEvent e) {
 
 	}
@@ -41,7 +40,7 @@ class Controller implements ActionListener, MouseListener
 	}
 
 	public void mouseClicked(MouseEvent e) {
-
+		model.onClick();
 	}
 
 

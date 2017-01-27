@@ -25,6 +25,7 @@ class Model {
     if(bird.y_pos > tube.y + 400) // top -> bottom collision
       return false;
 
+    System.out.println.("Ouch");
     return true;
   }
 
