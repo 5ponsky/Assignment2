@@ -1,29 +1,28 @@
 import java.util.Random;
 
 class Tube {
-  int xVel = -4.0;
+  final int TUBEBOUND = 115;
   int x_pos, y_pos;
   boolean tubeUpwards;
+  Random random;
 
-  final int startTube = 510;
-  final int endTube = -10;
-  final int tubeBound = 50;
-
-  Tube() {
-    x_pos = startTube;
+  Tube(Random r) {
+    random = r;
   }
 
-  public void update(Random r) {
-    x_pos = x_pos - 3;
-    if(x_pos < -10) {
-      x_pos = startTube;
-      tubeUpwards = r.nextBoolean();
+  public void update() {
+    x_pos = x_pos - 6;
+
+    if(x_pos < -56) {
+      x_pos = 556;
+      tubeUpwards = random.nextBoolean();
 
       if(tubeUpwards)
-        y_pos = r.nextInt(tubeBound);
+        y_pos = random.nextInt(TUBEBOUND) + 250;
       else
-        y_pos = r.nextInt(tubeBound + 500);
+        y_pos = random.nextInt(TUBEBOUND) - 250;
     }
+
   }
 
 }

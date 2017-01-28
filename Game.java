@@ -13,7 +13,7 @@ public class Game extends JFrame
 		model = new Model();
 		Controller controller = new Controller(model);
 		view = new View(controller, model);
-		this.setTitle("Turtle Attack!");
+		//this.setTitle("Turtle Attack!");
 		this.setSize(500, 500);
 		this.getContentPane().add(view);
 		this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -33,7 +33,7 @@ public class Game extends JFrame
 				System.exit(1);
 			}
 
-			System.out.println("hi");
+			System.out.println("Running");
 		}
 	}
 

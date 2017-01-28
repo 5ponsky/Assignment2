@@ -1,20 +1,22 @@
 class Bird {
-  int x_pos, y_pos, flapCounter;
   boolean flapped;
-
-  final int flapWings = 75;
+  double gravity;
+  int x_pos, y_pos, flapCounter;
 
   Bird() {
-
+    x_pos = 10;
+    y_pos = 250;
   }
 
   public void flap() {
-    y_pos = -5;
-    flapCounter = flapWings;
+    gravity = gravity - 2.5;
+    y_pos = y_pos - (int) gravity;
+    flapCounter = 3;
   }
 
   public void update() {
-    y_pos = y_pos + y_pos + (0.6);
+    gravity = gravity + 0.3;
+    y_pos = y_pos + (int) gravity;
     --flapCounter;
   }
 

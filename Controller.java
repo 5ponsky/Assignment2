@@ -2,11 +2,13 @@ import java.awt.event.MouseListener;
 import java.awt.event.MouseEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
+import java.awt.Robot;
 
 class Controller implements ActionListener, MouseListener
 {
 	View view;
 	Model model;
+	Robot robot;
 
 	Controller(Model m)
 	{
@@ -18,9 +20,8 @@ class Controller implements ActionListener, MouseListener
 		view.addMouseListener(this);
 	}
 
-	public void actionPerformed(ActionEvent e)
-	{
-		view.removeButton();
+	public void actionPerformed(ActionEvent e) {
+		robot.mouseWheel(0);
 	}
 
 	public void mousePressed(MouseEvent e) {
